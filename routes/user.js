@@ -90,7 +90,7 @@ router.post('/forgot-password', async (req, res) => {
             const expiresInMinutes = 5;
             const token = jwt.sign(userDataObj, JWT_SECRET, { expiresIn: expiresInMinutes * 60 });
             const to = results[0].email;
-            const resetLink = `http://localhost:8090/password-reset/${token}`
+            const resetLink = `https://srsemy66hq.us-east-1.awsapprunner.com/password-reset/${token}`
             const subject = `Reset Your Password - Cognitive`
             const html = `<p>Click the Link below to Reset Your Passord. 
             <br>
