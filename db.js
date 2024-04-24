@@ -3,11 +3,11 @@ const mysql = require('mysql');
 const connectionWithDb = () => {
     return new Promise((resolve, reject) => {
         const connection = mysql.createConnection({
-            host: 'localhost',
+            host: 'cognitive.cj6qyymwab69.us-east-1.rds.amazonaws.com',
             port: '3306',
-            user: 'root',
+            user: 'admin',
             database: 'cognitive',
-            password: ''
+            password: 'cognitive123'
         });
 
         connection.connect((err) => {
