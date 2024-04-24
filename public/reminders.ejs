@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders</title>
+    <%- include('./partials/csslinks') %>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <section class="contact-list-section">
+        <div class="container">
+            <h1 class="main-heading mt-5">Reminders</h1>
+            <% if(reminders.length > 0) { %>
+            <table class="table caption-top mt-5">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Reminder Name</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Message</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% reminders.forEach((reminder,index)=>{ %>
+                    <tr>
+                      <th scope="row"><%= index + 1 %></th>
+                      <!-- <td>15/4/2024 9:00AM</td> -->
+                      <td><%= reminder.name %></td>
+                      <td><%= formatTimeDate(reminder.time) %></td>
+                      <td><%= reminder.message %></td>
+                      <td>
+                        <form action="/api/reminders/delete-todo" method="post">
+                          <input type="hidden" name="id" value="<%= reminder.id %>">
+                          <button type="submit" class="delete-btn">
+                            <img src="/assets/images/delete.svg" alt="">
+                          </button>
+                        </form>
+                      </td>
+                    </tr>
+                  <% }) %>
+                </tbody>
+              </table>
+              <% } else { %>
+                <div class="empty-items">
+                  <span class="items-icon"><i class="fa-solid fa-items-xmark"></i></span>
+                  <h2 class="theme-h2">No Reminder Found.</h2>
+                  <h5 class="theme-p">Please add to do to see here...</h5>
+                  <a href="/add-todos" class="theme-btn">Add Todo</a>
+                </div>
+              <% } %>
+        </div>
+    </section>
+
+<%- include('./partials/footer') %>
+
+<%- include('./partials/scriptlinks') %>
+</body>
+
+</html>

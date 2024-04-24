@@ -1,0 +1,353 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+
+.toast-container {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    max-width: 400px;
+}
+
+.toast-container .toast {
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.toast-container .toast.success {
+    background-color: #051b11;
+    border: 1px solid #0f5132;
+}
+
+.toast-container .toast.error {
+    background-color: #2c0b0e;
+    border: 1px solid #842029;
+}
+
+.toast-container .toast .close-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+.toast-container .toast .close-btn img{
+    width: 30px;
+}
+
+.toast .toast-body {
+    color: #fff;
+}
+
+.registration-background {
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-box {
+    background-color: #fff;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.registration-box-inner {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.registration-box-inner h2 {
+    color: #B48156;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.registration-box-inner p {
+    color: #6B6B6B;
+}
+
+.custom-input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.custom-input .custom-input-icon {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.custom-input .custom-input-icon i,
+.custom-input .password-show i {
+    color: #3C3C3C;
+}
+
+.custom-input .custom-input-icon:before {
+    content: '';
+    background-color: #D3D3D3;
+    width: 1px;
+    height: 75%;
+    right: -10px;
+    position: absolute;
+}
+
+.custom-input .password-show {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-input input {
+    padding: 15px;
+    padding-left: 50px;
+    border: 1px solid #D2D2D2 !important;
+    border-radius: 10px;
+}
+
+.registration-box-inner .custom-input input {
+    padding-left: 50px;
+}
+
+.custom-input .password-show .fa-eye-slash {
+    display: none;
+}
+
+.separator {
+    margin: 15px 0;
+}
+
+.custom-button button {
+    background-color: #B48156;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #B48156 !important;
+    transition: 0.3s all ease;
+    border-radius: 10px;
+}
+
+.custom-button button:hover {
+    background-color: #fff;
+    color: #B48156;
+}
+
+.account-register {
+    color: #A7A7A7;
+}
+
+.account-register a {
+    color: #B48156;
+    text-decoration: none;
+}
+
+.dashboard-main {
+    margin-top: 50px;
+}
+
+.dasboard-box {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+}
+
+.dasboard-box a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.dasboard-box-content h5 {
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.main-heading {
+    text-align: center;
+    font-weight: 55px;
+    font-weight: 700;
+}
+
+.para {
+    color: #6B6B6B;
+    margin-bottom: 25px;
+}
+
+.dasboard-box:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.85;
+    border-radius: 20px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f8f9fa;
+    padding: 10px;
+    font-size: 14px;
+    color: #6B6B6B;
+}
+
+.mind-games-section {
+    padding: 40px 0;
+}
+
+.mind-games-section iframe {
+    height: 100vh;
+}
+
+.mood-section {
+    padding: 50px 0;
+}
+
+.mood-section textarea {
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid #D2D2D2 !important;
+}
+
+span#mood-track {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.contact-box {
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 60px;
+}
+
+.custom-input label {
+    color: #C5C5C5;
+    text-transform: capitalize;
+}
+
+.custom-input input {
+    background: transparent;
+    border: none !important;
+    border-bottom: 1px solid #D9D9D9 !important;
+    border-radius: 0px;
+    padding: 15px 0px;
+}
+
+.contact-section .custom-input input:focus {
+    box-shadow: none !important;
+    background-color: transparent;
+    border-bottom: 1px solid #000 !important;
+}
+
+.empty-items {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.delete-btn {
+    display: block;
+    width: fit-content;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    opacity: 0.7;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.delete-btn img {
+    width: 30px;
+}
+.contact-list-section a.theme-btn {
+    text-decoration: none;
+    border: 1px solid #B48156;
+    background: #B48156;
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: 0.5s all ease;
+}
+.contact-list-section a.theme-btn:hover{
+    border: 1px solid #B48156;
+    background: transparent;
+    color: #B48156;
+}
+@media (max-width: 992px) {
+    footer{
+        position: relative;
+    }
+    .contact-section{
+        height: auto;
+        padding: 40px 0;
+    }
+}
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    .registration-box-inner {
+        width: 95%;
+    }
+
+    .registration-box-inner h2 {
+        font-size: 40px;
+    }
+
+    .main-heading {
+        font-size: 35px;
+    }
+
+    .contact-box {
+        padding: 30px;
+    }
+
+    footer {
+        position: relative;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add ToDos</title>
+    <%- include('./partials/csslinks') %>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-box">
+                <h1 class="main-heading mb-5">Add Reminders</h1>
+                <form action="/api/reminders/add-todo" method="post">
+                    <div class="row custom-input">
+                        <div class="col-12 col-lg-6 mb-4">
+                            <label for="">Reminder Name</label>
+                            <input name="name" type="text" class="form-control" required>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-4">
+                            <label for="">Reminder Time</label>
+                            <input name="time" type="datetime-local" class="form-control" required>
+                        </div>
+                        <div class="col-12 col-lg-12 mb-4">
+                            <label for="">Reminder Message</label>
+                            <input name="message" type="text" class="form-control" required>
+                        </div>
+                        <div class="custom-button mt-4">
+                            <button type="submit" class="btn">Submit Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<%- include('./partials/footer') %>
+
+<%- include('./partials/scriptlinks') %>
+</body>
+
+</html>

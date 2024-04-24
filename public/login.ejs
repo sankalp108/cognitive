@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <%- include('./partials/csslinks') %>
+</head>
+
+<body>
+    <section class="registration-background" style="background-image: url(assets/images/login.png);">
+        <div class="container-fluid">
+            <div class="col-12 col-lg-5 ms-lg-auto registration-box">
+                <div class="registration-box-inner">
+                    <h2>sign in</h2>
+                    <p>Sign in to continue your journey. Access exclusive features
+                        and personalized experiences.</p>
+                    <form action="/api/user/login" method="POST">
+                        <div class="custom-input">
+                            <div class="custom-input-icon">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <input name="email" type="email" placeholder="Enter your email" class="form-control" required>
+                        </div>
+                        <div class="custom-input">
+                            <div class="custom-input-icon">
+                                <i class="far fa-lock-alt"></i>
+                            </div>
+                            <input name="password" type="password" placeholder="Enter your password" class="form-control" required>
+                            <div class="password-show">
+                                <i class="far fa-eye"></i>
+                                <i class="far fa-eye-slash"></i>
+                            </div>
+                        </div>
+                        <div class="custom-button">
+                            <button type="submit" class="btn">Login</button>
+                        </div>
+                    </form>
+                    <div class="separator">
+                        <img src="/assets/images/separator.png" class="img-fluid" alt="separator">
+                    </div>
+                    <p class="account-register"><a href="/forgot-password">Forgot Password</a></p>
+                    <p class="account-register">Don't have an account? <a href="/signup">Create an Account</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<%- include('./partials/notification.ejs') %>
+
+<%- include('./partials/scriptlinks') %>
+</body>
+
+</html>

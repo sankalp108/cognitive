@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <%- include('./partials/csslinks') %>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <section class="mood-section">
+        <div class="container">
+            <h1 class="main-heading">Track Mood</h1>
+            <p class="para text-center">Write some lines so that AI can track your mood</p>
+            <textarea class="form-control" id="text-mood" cols="30" rows="10"></textarea>
+
+            <div class="custom-button mt-4 text-center">
+                <button class="btn m-auto" onclick="trackMood()">Check Mood</button>
+            </div>
+
+            <span id="mood-track"></span>
+        </div>
+    </section>
+
+<%- include('./partials/footer') %>
+
+<%- include('./partials/scriptlinks') %>
+    <script>
+
+    function trackMood() {
+        var textInput = $('#text-mood').val();
+        const data = JSON.stringify([
+            {
+                "id": "1",
+                "language": "en",
+                "text": textInput
+            }
+        ]);
+
+        const settings = {
+            async: true,
+            crossDomain: true,
+            url: 'https://ekman-emotion-analysis.p.rapidapi.com/ekman-emotion',
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                'Accept': 'application/json',
+                'X-RapidAPI-Key': '47c8068aa5msh85a65b2b6ed0766p1c91a1jsne94c0b68100c',
+                'X-RapidAPI-Host': 'ekman-emotion-analysis.p.rapidapi.com'
+            },
+            processData: false,
+            data: data
+        };
+
+        $.ajax(settings).done(function(response) {
+            console.log(response);
+            var trackedMood = response[0].predictions[0].prediction;
+            $("#mood-track").html("Your Mood is " + trackedMood);
+        });
+    }
+    </script>
+</body>
+
+</html>

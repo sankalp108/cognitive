@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/csslinks') %>
+    <title>Add Contacts</title>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-box">
+                <h1 class="main-heading mb-5">Emergency Contact Form</h1>
+                <form action="/api/contacts/add-new" method="POST">
+                    <div class="row custom-input">
+                        <div class="col-12 col-lg-6 mb-4">
+                            <label for="">first name</label>
+                            <input name="firstName" type="text" class="form-control" required>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-4">
+                            <label for="">last name</label>
+                            <input name="lastName" type="text" class="form-control" required>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-4">
+                            <label for="">email address</label>
+                            <input name="email" type="email" class="form-control" required>
+                        </div>
+                        <div class="col-12 col-lg-6 mb-4">
+                            <label for="">phone</label>
+                            <input name="phone" type="tel" class="form-control" required>
+                        </div>
+                        <div class="custom-button mt-4">
+                            <button type="submit" class="btn">Submit Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<%- include('./partials/footer') %>
+
+<%- include('./partials/scriptlinks') %>
+</body>
+
+</html>

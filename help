@@ -1,0 +1,12 @@
+email.js
+- you will find a function sendMail where you have to update SMTP to send mails to users.
+- Domain, username and password needs to be updated
+
+db.js
+- in this file you have connectWithDb function, you will have to update the connectiion string.
+
+chat.js
+- this file contains openai API_KEY which I have added of my own you need to replace that.
+
+user.js
+- In this file you need to search "forgot-password" you will see router.post in this you will have to update the resetLink which you will see localhost for now.
