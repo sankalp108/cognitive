@@ -3,7 +3,7 @@ const router = express.Router();
 const OpenAIApi = require("openai");
 
 const openai = new OpenAIApi({
-    apiKey: "sk-proj-8sFJgN0yDdu3XP9W7CFVT3BlbkFJxvtopFmoOYH8aDNohfDB"
+    apiKey: "sk-proj-tjsZCeX8dpF6t7ad53jbT3BlbkFJCsbfkKQNdXYZT4FeIV1W"
 });
 
 router.post('/', async (req, res) => {
