@@ -6,14 +6,14 @@ const sendMail = async (to, subject, html) => {
             host: 'provolutiontech.com',
             port: 465,
             auth: {
-                user: 'sankalp@provolutiontech.com',
+                user: 'sankalp@moodtracker.com',
                 pass: 'FhXz(Tj%IzkM'
             }
         });
 
         // Construct the email message
         const mailOptions = {
-            from: 'sankalp@provolutiontech.com',
+            from: 'sankalp@moodtracker.com',
             to: to,
             subject: subject,
             html: html
