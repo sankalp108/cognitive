@@ -3,17 +3,17 @@ const nodemailer = require('nodemailer');
 const sendMail = async (to, subject, html) => {
     return new Promise(async (resolve, reject) => {
         const transporter = await nodemailer.createTransport({
-            host: 'temple.edu',
+            host: 'provolutiontech.com',
             port: 465,
             auth: {
-                user: 'tuk25392@temple.edu',
-                pass: 'Samp@1933'
+                user: 'sankalp@provolutiontech.com',
+                pass: 'FhXz(Tj%IzkM'
             }
         });
 
         // Construct the email message
         const mailOptions = {
-            from: 'tuk25392@temple.edu',
+            from: 'sankalp@provolutiontech.com',
             to: to,
             subject: subject,
             html: html
